@@ -16,7 +16,7 @@
 .hand {
   width: 50%;
   height: 6px;
-  background: #333;
+  background: #838383;
   position: absolute;
   top: 50%;
   transform-origin: 100%;
@@ -36,4 +36,18 @@
 .second-hand {
   height: 4px;
   background: red;
+}
+
+nav{
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 1920px;
+  width: 100vw;
+}
+
+body{
+  background-color: rgb(26, 26, 26);
+  color:white
 }

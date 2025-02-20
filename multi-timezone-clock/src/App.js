@@ -16,9 +16,11 @@ function App() {
     <div className="App">
       <h1>Часы для разных часовых поясов</h1>
       <TimezoneSelector onSelect={handleTimezoneSelect} />
+      <nav>
       {selectedTimezones.map((tz, index) => (
         <Clock key={index} timezone={tz} />
       ))}
+      </nav>
     </div>
   );
 }
