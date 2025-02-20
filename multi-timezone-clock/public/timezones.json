@@ -1,0 +1,6 @@
+[
+    {"city": "Москва", "timezone": "Europe/Moscow"},
+    {"city": "Красноярск", "timezone": "Asia/Krasnoyarsk"},
+    {"city": "Владивосток", "timezone": "Asia/Vladivostok"},
+    {"city": "Калининград", "timezone": "Europe/Kaliningrad"}
+  ]
