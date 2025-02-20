@@ -42,7 +42,6 @@ nav{
   position: relative;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
   max-width: 1920px;
   width: 100vw;
 }

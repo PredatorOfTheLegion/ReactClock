@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import moment from 'moment-timezone';
+import React, { useEffect, useState } from "react";
+import moment from "moment-timezone";
 
 const AnalogClock = ({ timezone }) => {
-  const [time, setTime] = useState(moment().tz(timezone).toDate());
+  const [time, setTime] = useState(moment().tz(timezone));
+
+  useEffect(() => {
+    setTime(moment().tz(timezone)); // Обновляем время при смене часового пояса
+  }, [timezone]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(moment().tz(timezone).toDate());
+      setTime(moment().tz(timezone)); // Обновляем каждую секунду
     }, 1000);
 
     return () => clearInterval(interval);
   }, [timezone]);
 
-  const seconds = time.getSeconds();
-  const minutes = time.getMinutes();
-  const hours = time.getHours() % 12;
+  const seconds = time.seconds();
+  const minutes = time.minutes();
+  const hours = time.hours() % 12;
 
   const secondStyle = {
     transform: `rotate(${seconds * 6}deg)`,
